@@ -1,0 +1,55 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Cabinet pluridisciplinaire à Sceaux offrant des bureaux équipés pour les professionnels. Emplacement central, idéal pour psychologues, thérapeutes et experts en bien-être. Réservez dès aujourd'hui." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+	<header class="sticky top-0 mx-auto border-b border-secondary bg-white py-5">
+		<nav class="container mx-auto flex flex-wrap items-center gap-5 text-lg md:text-2xl">
+			<a
+				href="#avantages"
+				class="transition-colors hover:text-lime-600"
+			>
+				Le cabinet
+			</a>
+			<a
+				href="#gallery"
+				class="transition-colors hover:text-lime-600"
+			>
+				Gallerie
+			</a>
+			<a
+				href="#tarifs"
+				class="transition-colors hover:text-lime-600"
+			>
+				Tarifs
+			</a>
+			<a
+				href="#contact"
+				class="ml-auto rounded bg-lime-600 p-3 text-white"
+			>
+				Contact
+			</a>
+		</nav>
+	</header>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+	}
+</style>
