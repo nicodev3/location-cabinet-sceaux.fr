@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import myImage from "../../public/images/photo-2-1200w.jpg";
-import cabImage from "../../public/images/cabinet-sceaux.jpeg"
+import cabImage from "../../public/images/cabinet-sceaux.jpeg";
 import contactImage from "../../public/images/contact.svg";
 ---
 
@@ -24,7 +24,7 @@ import contactImage from "../../public/images/contact.svg";
         </p>
         <p class="pb-5">
           Avec un emplacement central dans la rue piétonne de la ville de
-          Sceaux, proche des commerces et de toutes commodités, vos clients 
+          Sceaux, proche des commerces et de toutes commodités, vos clients
           auront un accès facile à votre cabinet. Nous nous engageons à créer un
           environnement accueillant et fonctionnel pour votre travail.
         </p>
@@ -39,13 +39,15 @@ import contactImage from "../../public/images/contact.svg";
           <a
             href="#contact"
             class="underline"
-            >
-			nous contacter
-		</a>.
+          >
+            nous contacter
+          </a>.
         </p>
       </div>
       <Image
         src={myImage}
+		width="500"
+		height="333"
         alt="cabinet de consultation"
       />
     </section>
@@ -99,11 +101,13 @@ import contactImage from "../../public/images/contact.svg";
             </p>
           </div>
         </div>
-		<Image
-		src={cabImage}
-		alt="espace de consultation"
-		class="mx-auto"
-  />
+        <Image
+          src={cabImage}
+		  width="1000"
+		  height="500"
+          alt="espace de consultation"
+          class="mx-auto"
+        />
       </div>
     </section>
 
