@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import myImage from "../../public/images/photo-2-1200w.jpg";
+import cabImage from "../../public/images/cabinet-sceaux.jpeg"
 import contactImage from "../../public/images/contact.svg";
 ---
 
@@ -23,7 +24,7 @@ import contactImage from "../../public/images/contact.svg";
         </p>
         <p class="pb-5">
           Avec un emplacement central dans la rue piétonne de la ville de
-          Sceaux, proche des commerces et de toutes commodités, vos patients
+          Sceaux, proche des commerces et de toutes commodités, vos clients 
           auront un accès facile à votre cabinet. Nous nous engageons à créer un
           environnement accueillant et fonctionnel pour votre travail.
         </p>
@@ -35,10 +36,18 @@ import contactImage from "../../public/images/contact.svg";
           vise à fournir un espace de travail fonctionnel et accueillant.
           L&apos;accès aux transports en commun est aisé. Pour plus
           d&apos;informations, n&apos;hésitez pas à{" "}
-          <a href="#contact" class="underline">nous contacter</a>.
+          <a
+            href="#contact"
+            class="underline"
+            >
+			nous contacter
+		</a>.
         </p>
       </div>
-      <Image src={myImage} alt="cabinet de consultation" />
+      <Image
+        src={myImage}
+        alt="cabinet de consultation"
+      />
     </section>
 
     <section
@@ -49,7 +58,7 @@ import contactImage from "../../public/images/contact.svg";
         <h2 class="text-lime-700 mb-5 text-3xl font-semibold">
           Les avantages du cabinet
         </h2>
-        <div class="grid gap-8 md:grid-cols-2">
+        <div class="grid gap-8 md:grid-cols-2 mb-10">
           <div>
             <h3 class="mb-3 text-2xl">Équipements de Notre Cabinet</h3>
             <p>
@@ -90,6 +99,11 @@ import contactImage from "../../public/images/contact.svg";
             </p>
           </div>
         </div>
+		<Image
+		src={cabImage}
+		alt="espace de consultation"
+		class="mx-auto"
+  />
       </div>
     </section>
 
@@ -133,9 +147,12 @@ import contactImage from "../../public/images/contact.svg";
       </table>
     </section>
 
-    <section id="tarifs" class="mb-10 md:mb-12 bg-gray-100">
+    <section
+      id="tarifs"
+      class="mb-10 md:mb-12 bg-gray-100"
+    >
       <div class="container px-5 md:px-0 mx-auto py-12">
-        <h2 class="text-lime-700 mb-5 text-3xl font-semibold">Tarifs</h2>
+        <h2 class="text-lime-700 mb-5 font-semibold text-3xl">Tarifs</h2>
         <p class="mb-3">
           Tarif à la Demi-journée : <span class="font-semibold">40</span> € pour
           une demi-journée de 6 heures, incluant les charges, soit{" "}
@@ -156,12 +173,20 @@ import contactImage from "../../public/images/contact.svg";
       </div>
     </section>
 
-    <section id="contact" class="container px-5 md:px-0 mx-auto">
+    <section
+      id="contact"
+      class="container px-5 md:px-0 mx-auto"
+    >
       <h2 class="text-lime-700 mb-5 text-3xl font-semibold">Contact</h2>
       <p class="mb-5">
         Pour toute information, nous vous invitons à nous contacter :
       </p>
-      <Image src={contactImage} alt="email adress" width="278" height="86" />
+      <Image
+        src={contactImage}
+        alt="email adress"
+        width="278"
+        height="86"
+      />
     </section>
   </main>
 </Layout>
